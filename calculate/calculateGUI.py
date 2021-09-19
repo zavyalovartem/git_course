@@ -48,7 +48,10 @@ class Main(Frame):
             self.formula += operation
         self.update()
 
-    
+    def update(self):
+        if self.formula == "":
+            self.formula = "0"
+        self.lbl.configure(text=self.formula)
 
 
 if __name__ == '__main__':
